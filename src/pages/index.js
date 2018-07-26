@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Logo from '../components/Logo';
-import ScheduleTimeline from '../components/ScheduleTimeline';
+import Timeline from '../components/Timeline';
 import MailinglistForm from '../components/MailinglistForm';
 
 const IndexPage = () => (
@@ -55,7 +55,7 @@ const IndexPage = () => (
         sekä sisällöstä lisätään tälle sivulle kurssin alettua.
       </p>
 
-      <ScheduleTimeline />
+      <Timeline />
 
       <table>
         <thead>

@@ -11,8 +11,10 @@
     "react-calendar-timeline": "^0.17.3",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-visjs-timeline": "^1.5.0",
     "styled-components": "^3.3.3",
-    "typeface-open-sans-condensed": "0.0.54"
+    "typeface-open-sans-condensed": "0.0.54",
+    "vis": "^4.21.0"
   },
   "keywords": [
     "gatsby"
