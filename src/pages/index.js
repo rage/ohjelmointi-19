@@ -4,7 +4,9 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Logo from '../components/Logo';
 import Timeline from '../components/Timeline';
-import MailinglistForm from '../components/MailinglistForm';
+import MailinglistForm from '../components/MailinglistForm'
+import Sidebar from '../components/Sidebar'
+import ContentArea from '../components/ContentArea'
 
 const IndexPage = () => (
   <Fragment>
