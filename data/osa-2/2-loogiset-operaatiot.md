@@ -214,13 +214,12 @@ Edellisessä lähestymistavassa ongelmana on se, että **ehtolauseiden läpikäy
 
 Yksi lähestymistapa yllä olevan ajatusketjun kehittämiseen on ensin etsiä **vaativin ehto** ja toteuttaa se. Tämän jälkeen toteutettaisiin muut ehdot. Yllä olevassa esimerkissä ehto "jos luku on jaollinen kolmella **ja** viidellä" vaatii kahden tapauksen toteutumista. Nyt ajatusketju olisi muotoa.
 
-<ol>
-  <li>Tee ohjelma, joka lukee luvun käyttäjältä.</li>
-  <li>Jos luku on jaollinen kolmella ja viidellä, tulosta luvun sijan merkkijono "FizzBuzz".</li>
-  <li>Jos luku on jaollinen kolmella, tulosta luvun sijaan merkkijono "Fizz".</li>
-  <li>Jos luku on jaollinen viidellä, tulosta luvun sijaan merkkijono "Buzz".</li>
-  <li>Muulloin ohjelma tulostaa käyttäjältä luetun luvun.</li>
-</ol>
+1. Tee ohjelma, joka lukee luvun käyttäjältä.
+2. Jos luku on jaollinen kolmella ja viidellä, tulosta luvun sijan merkkijono "FizzBuzz".
+3. Jos luku on jaollinen kolmella, tulosta luvun sijaan merkkijono "Fizz".
+4. Jos luku on jaollinen viidellä, tulosta luvun sijaan merkkijono "Buzz".
+5. Muulloin ohjelma tulostaa käyttäjältä luetun luvun.
+
 
 Nyt ongelmakin tuntuu ratkeavan.
 

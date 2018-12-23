@@ -1214,9 +1214,9 @@ Ohjelman tulostus:
 
 <sample-output>
 
-*****
-***
-*********
+\*\*\*\*\*
+\*\*\*
+\*\*\*\*\*\*\*\*\*
 
 </sample-output>
 
@@ -1229,10 +1229,10 @@ Tee metodi `tulostaNelio(int sivunpituus)` joka tulostaa neliön käyttäen `tul
 
 <sample-output>
 
-****
-****
-****
-****
+\*\*\*\*
+\*\*\*\*
+\*\*\*\*
+\*\*\*\*
 
 </sample-output>
 
@@ -1247,9 +1247,9 @@ Tee metodi `tulostaSuorakulmio(int leveys, int korkeus)` joka tulostaa suorakulm
 
 <sample-output>
 
-*****************
-*****************
-*****************
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 </sample-output>
 
@@ -1260,10 +1260,10 @@ Tee metodi `tulostaKolmio(int koko)` joka tulostaa kolmion käyttäen `tulostaTa
 
 <sample-output>
 
-*
-**
-***
-****
+\*
+\*\*
+\*\*\*
+\*\*\*\*
 
 </sample-output>
 
