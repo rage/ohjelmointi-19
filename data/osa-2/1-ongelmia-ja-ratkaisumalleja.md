@@ -201,6 +201,17 @@ if (luku > 5) {
 }
 ```
 
+Ohjelma, joka tulostaa "ok" kun ohjelmassa olevan lukumuuttujan arvo on suurempi kuin `42`, mulloin "ei ok", toteutetaan seuraavasti.
+
+
+```java
+int luku = 15;
+if (luku > 42) {
+    System.out.println("ok");
+} else {
+    System.out.println("ei ok")
+}
+```
 
 Ehtolauseiden ketjuttaminen on mahdollista. Tällöin ongelmat ovat muotoa "jos a, niin b; muulloin jos c, niin d; muulloin jos e, niin f; muulloin g". Ketjutus toteutetaan `if`-komennon lohkoa seuraavasta `else if` -komennosta, johon liittyy oma lauseke sekä lohko. Lopuksi tulee `else`komento sekä siihen liittyvä lohko.
 
@@ -217,17 +228,9 @@ if (luku > 5) {
 }
 ```
 
-Esimerkiksi ohjelma, joka tulostaa "ok" kun ohjelmassa olevan lukumuuttujan arvo on suurempi kuin `42`, mulloin "ei ok", toteutetaan seuraavasti.
 
+<quiznator id="5c1f6a263516ce119a7f45df"></quiznator>
 
-```java
-int luku = 15;
-if (luku > 42) {
-    System.out.println("ok");
-} else {
-    System.out.println("ei ok")
-}
-```
 
 Ehtotoiminnallisuutta voi yhdistää myös muiden ratkaisumallien kanssa. Tarkastellaan ongelmaa "Lue käyttäjältä kaksi lukua. Mikäli lukujen summa on yli 100, tulosta käyttäjälle merkkijono `liikaa`. Mikäli lukujen summa on alle 0, tulosta käyttäjälle merkkijono `liian vähän`. Muulloin, tulosta käyttäjälle merkkijono `ok`.". Ohjelma, joka yhdistää lukemisen, laskemisen ja ehtolauseen on annettu alla.
 
@@ -865,6 +868,9 @@ Alla muutamia ohjelman esimerkkitulosteita.
 0
 
 </sample-output>
+
+
+<quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
 
 
 <programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa01-Osa01_02.AdaLovelace'>
