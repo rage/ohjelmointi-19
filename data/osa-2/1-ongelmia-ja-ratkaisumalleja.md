@@ -121,7 +121,7 @@ public class Ohjelma {
 }
 ```
 
-<programming-exercise name='Toiseen potenssiin' tmcname='osa01-Osa01_01.Hiekkalaatikko'>
+<programming-exercise name='Toiseen potenssiin' tmcname='osa02-Osa02_01.ToiseenPotenssiin'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun korotettuna toiseen potenssin eli luvun kerrottuna itsellään.
 
@@ -149,7 +149,7 @@ Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun ja tulostaa luvun kor
 </programming-exercise>
 
 
-<programming-exercise name='Summan neliöjuuri' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Summan neliöjuuri' tmcname='osa02-Osa02_02.SummanNeliojuuri'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua ja tulostaa lukujen summan neliöjuuren. Ohjelman ei tarvitse käsitellä negatiivisia lukuja. Alla muutamia esimerkkejä.   
 
@@ -267,7 +267,7 @@ public class Ohjelma {
 ```
 
 
-<programming-exercise name='Itseisarvo' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Itseisarvo' tmcname='osa02-Osa02_03.Itseisarvo'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pienempi kuin 0, ohjelma tulostaa luvun kerrottuna luvulla -1. Muulloin ohjelma tulostaa käyttäjän syöttämän luvun. Alla on muutamia esimerkkejä ohjelman odotetusta toiminnasta.
 
@@ -294,7 +294,7 @@ Kirjoita ohjelma, joka lukee käyttäjältä kokonaisluvun. Mikäli luku on pien
 
 </programming-exercise>
 
-<programming-exercise name='Tietoa luvuista' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Tietoa luvuista' tmcname='osa02-Osa02_04.TietoaLuvuista'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kaksi kokonaislukua. Mikäli ensimmäinen luku on suurempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on suurempi kuin luku (toinen).". Mikäli ensimmäinen luku on pienempi kuin toinen luku, ohjelma tulostaa "Luku (ensimmäinen) on pienempi kuin luku (toinen).". Muulloin ohjelma tulostaa "Luku (ensimmäinen) on yhtä suuri kuin luku (toinen).". Edeltävissä esimerkeissä kohdat (ensimmäinen) ja (toinen) tulee aina korvata syötetyillä luvuilla.
 
@@ -363,7 +363,7 @@ public class Ohjelma {
 }
 ```
 
-<programming-exercise name='Hip hip hurraa!' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Hip hip hurraa!' tmcname='osa02-Osa02_05.HipHipHurraa'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "lopeta". Kun käyttäjä syöttää merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hurraa!", jonka jälkeen ohjelman suoritus päättyy. Muulloin, eli kun käyttäjä syöttää jotain muuta kuin merkkijonon "lopeta", ohjelma tulostaa merkkijonon "hip!". 
 
@@ -587,7 +587,7 @@ if (lukuja == 0) {
 ```
 
 
-<programming-exercise name='Merkkijonojen lukumäärä' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Merkkijonojen lukumäärä' tmcname='osa02-Osa02_06.MerkkijonojenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä syötettä kunnes käyttäjä syöttää merkkijonon "loppu". Tämän jälkeen ohjelma tulostaa käyttäjältä luettujen merkkijonojen määrän. Merkkijonojen määrään ei tule ottaa mukaan syötteen loppumista ilmoittavaa merkkijonoa "loppu".
 
@@ -630,7 +630,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 </programming-exercise>
 
 
-<programming-exercise name='Lukujen summa' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Lukujen summa' tmcname='osa02-Osa02_07.LukujenSumma'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa lukujen summan.
 
@@ -660,7 +660,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 </programming-exercise>
 
 
-<programming-exercise name='Ykkösten lukumäärä' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Ykkösten lukumäärä' tmcname='osa02-Osa02_08.YkkostenLukumaara'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden ykkösten (eli luvun yksi) lukumäärän.
 
@@ -709,7 +709,7 @@ Alla on muutamia esimerkkejä ohjelman toiminnasta.
 </programming-exercise>
 
 
-<programming-exercise name='Ykkösten osuus' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Ykkösten osuus' tmcname='osa02-Osa02_09.YkkostenOsuus'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden ykkösten (eli luvun yksi) osuuden, eli ykkösten lukumäärän jaettuna syötettyjen lukujen lukumäärällä. Syötteen lopettavaa lukua 0 ei tule ottaa huomioon ykkösten osuutta laskettaessa.
 
@@ -873,7 +873,7 @@ Alla muutamia ohjelman esimerkkitulosteita.
 <quiznator id="5c1f6c8b64cf001162cb9790"></quiznator>
 
 
-<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa01-Osa01_02.AdaLovelace'>
+<programming-exercise name='Positiivisten lukujen keskiarvo' tmcname='osa02-Osa02_10.PositiivistenLukujenKeskiarvo'>
 
 Kirjoita ohjelma, joka lukee käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun 0. Tämän jälkeen ohjelma tulostaa syötteessä esiintyneiden positiivisten (eli nollaa suurempien lukujen) keskiarvon. 
 
