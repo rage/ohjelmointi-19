@@ -201,29 +201,22 @@ Jatkossa kun esittelemme metodeja, emme erikseen mainitse että niiden täytyy s
 
 Metodit nimetään siten, että ensimmäinen sana kirjoitetaan pienellä ja loput alkavat isolla alkukirjaimella, tälläisestä kirjoitustavasta käytetään nimitystä camelCase. Tämän lisäksi, metodin sisällä koodi on sisennetty taas neljä merkkiä.
 
-<table class="table">
-  <thead>
-    <tr><th>Väärin</th><th>Oikein</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        ```java
+Alla olevassa esimerkissä metodi on nimetty väärin. Nimi alkaa isolla alkukirjaimella ja metodin nimen osat on eroteltu toisistaan merkillä \_. Metodin sulut ovat myös erillään toisistaan ja sisennys on väärin.
+
+```java
 public static void Tama_metodi_sanoo_mur ( ) {
 System.out.println("mur");
 }
-        ```
-      </td>
-      <td>
-        ```java
+```
+
+Alla taas metodi on nimetty oikein. Nimi alkaa pienellä alkukirjaimella ja nimen osat on yhdistetty toisiinsa camelCase-tyylillä, missä jokainen uusi sana alkaa isolla kirjaimella. Sulut ovat kiinni metodissa ja toisissaan, jonka lisäksi metodin sisältö on sisennetty oikein.
+
+```java
 public static void tamaMetodiSanooMur() {
     System.out.println("mur");
 }
-        ```
-      </td>
-    </tr>
-  </tbody>
-</table>
+```
+
 
 
 ## Metodin muuttujat
@@ -251,7 +244,7 @@ public static void main(String[] args) {
     System.out.print("Anna toinen luku: ");
     int toka = Integer.valueOf(lukija.nextLine());
 
-    System.out.print("ja kolmas luku: ");
+    System.out.print("Anna kolmas luku: ");
     int kolmas = Integer.valueOf(lukija.nextLine());
 
     double keskiarvonTulos = keskiarvo(eka, toka, kolmas);
@@ -276,6 +269,8 @@ public static void main(String[] args) {
 }
 ```
 
+Yllä yritetään käyttää metodin `keskiarvo` sisällä määriteltyä muuttujaa `ka` ja tulostaa sen arvo. Muuttuja `ka` on kuitenkin olemassa vain metodin `keskiarvo` sisällä, eikä siihen pääse käsiksi ulkopuolelta.
+
 Myös seuraavanlaista virhettä näkee usein.
 
 ```java
@@ -284,14 +279,14 @@ public static void main(String[] args) {
     int toka = 8;
     int kolmas = 4;
 
-    keskiarvo(eka, toka, kolmas);
-
     // yritetään käyttää pelkkää metodin nimeä, EI TOIMI!
     System.out.print("Lukujen keskiarvo: " + keskiarvo);
 }
 ```
 
-Eli tässä yritettiin käyttää pelkkää metodin nimeä muuttujamaisesti. Toimiva tapa metodin tuloksen sijoittamisen apumuuttujaan lisäksi on suorittaa metodikutsu suoraan tulostuslauseen sisällä:
+Yllä yritetään käyttää metodin `keskiarvo` nimeä muuttujamaisesti. Metodia tulee kuitenkin kutsua.
+
+Toimiva tapa metodin tuloksen sijoittamisen apumuuttujaan lisäksi on suorittaa metodikutsu suoraan tulostuslauseen sisällä:
 
 ```java
 public static void main(String[] args) {
@@ -307,7 +302,8 @@ public static void main(String[] args) {
 Tässä siis ensin tapahtuu metodikutsu joka palauttaa arvon 5.0 joka sitten tulostetaan tulostuskomennon avulla.
 
 
-<%= partial 'partials/quiz', locals: { id: '5a6a68845eed25000480e6e5' } %>
+<quiznator id="5a6a68845eed25000480e6e5"></quiznator>
+
 
 **Muuttuja ei ole olemassa ennen sen esittelyä, ja muuttuja on olemassa vain niiden aaltosulkujen sisällä kuin missä se on esitelty**. Metodien yhteydessä tämä tarkoittaa sitä, että metodeilla on pääsy vain niihin muuttujiin, jotka ovat määritelty metodien sisällä, tai jotka metodi saa parametrina. Alla oleva esimerkki konkretisoi tilanteen, missä `kasvataKolme`-metodin sisällä yritetään muuttaa `main`-metodissa määritellyn `luku`-muuttujan arvoa.
 
@@ -614,7 +610,7 @@ Kun metodin sisällä kasvatetaan muuttujan `luku` arvoa kolmella, se onnistuu. 
 Parametri `luku` kopioidaan metodin käyttöön, eli metodia `kasvataKolmella` varten luodaan oma muuttuja nimeltä `luku`, johon pääohjelmassa olevan muuttujan `luku` arvo kopioidaan metodikutsun yhteydessä. Metodissa `kasvataKolmella` oleva muuttuja `luku` on olemassa vain metodin suorituksen ajan, eikä sillä ole yhteyttä pääohjelman samannimiseen muuttujaan.
 
 
-<%= partial 'partials/quiz', locals: { id: '5a57bcce574f0b000439a330' } %>
+<quiznator id="5a57bcce574f0b000439a330"></quiznator>
 
 
 ## Metodi voi palauttaa arvon
@@ -826,7 +822,9 @@ public static int summa(int eka, int toka) {
 
 Nyt pääohjelman muuttujan `luku1` arvo kopioituu metodin parametrin `eka` arvoksi ja pääohjelman muuttujan `luku2` arvo kopioituu metodin parametrin `toka` arvoksi.
 
-<%= partial 'partials/quiz', locals: { id: '5a6a68535eed25000480e6e4' } %>
+
+<quiznator id="5a6a68535eed25000480e6e4"></quiznator>
+
 
 <youtube id='zEHvycTo81c'></youtube>
 

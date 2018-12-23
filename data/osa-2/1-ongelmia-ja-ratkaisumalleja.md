@@ -12,7 +12,9 @@ title: 'Ongelman osia ja niiden ratkaisumalleja'
 </text-box>
 
 
-Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", "Laske lukujen keskiarvo",  "Lue käyttäjältä syötettä kunnes", "Montako lukua käyttäjä on syöttänyt.", jne. Tarkastellaan muutamia tällaisia ongelmia sekä niihin liittyviä ratkaisuja.
+Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", "Laske lukujen keskiarvo",  "Lue käyttäjältä syötettä kunnes", "Montako lukua käyttäjä on syöttänyt.", jne. 
+
+Tarkastellaan muutamia tällaisia ongelmia sekä niihin liittyviä ratkaisuja.
 
 
 ## Lukemista
@@ -43,17 +45,9 @@ public class Ohjelma {
 
 Ohjelmissa tulee usein laskea asioita kuten lukujen keskiarvoa tai lukujen summaa. Ratkaisumalli tällaisissa ohjelmissa on seuraava.
 
-<ol>
-  <li>
-    Määrittele laskemiseen tarvittavat syötteet ja luo niitä varten muuttujat. Ohjelman syötteitä ovat laskemisessa käytettävät arvot. Syötteiden tyypit tunnistaa tyypillisesti ongelma-alueen kuvauksesta.
-  </li>
-  <li>
-    Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
-  </li>
-  <li>
-    Kun lasku on laskettu, tee jotain laskun tuloksella. Tämä voi olla esimerkiksi laskuoperaation tuloksen tulostaminen, tai vaikkapa keskiarvon laskemisen yhteydessä lukujen summan jakamista lukujen määrällä.
-  </li>
-</ol>
+1. Määrittele laskemiseen tarvittavat syötteet ja luo niitä varten muuttujat. Ohjelman syötteitä ovat laskemisessa käytettävät arvot. Syötteiden tyypit tunnistaa tyypillisesti ongelma-alueen kuvauksesta.
+2. Selvitä tehtävä laskuoperaatio ja luo laskuoperaation tulokselle muuttuja. Tee ohjelman syötteiden perusteella lasku, jonka arvo asetetaan laskuoperaation tulokselle varattuun muuttujaan. Myös laskuoperaation tuloksen tyypin tunnistaa ongelma-alueen kuvauksesta.
+3. Kun lasku on laskettu, tee jotain laskun tuloksella. Tämä voi olla esimerkiksi laskuoperaation tuloksen tulostaminen, tai vaikkapa keskiarvon laskemisen yhteydessä lukujen summan jakamista lukujen määrällä.
 
 Esimerkiksi ongelman _Tee ohjelma, jonka avulla voidaan laskea kahden kokonaisluvun summa_. ratkaisumalli on seuraava.
 
@@ -63,7 +57,8 @@ Esimerkiksi ongelman _Tee ohjelma, jonka avulla voidaan laskea kahden kokonaislu
 int eka = 1;
 int toka = 2;
 
-// Selvitetään laskuoperaatio ja luodaan laskuoperaation tulokselle muuttuja
+// Selvitetään laskuoperaatio ja luodaan laskuoperaation
+// tulokselle muuttuja
 int summa = eka + toka;
 
 // Tulostetaan laskuoperaation tulos
@@ -90,7 +85,8 @@ public class Ohjelma {
         eka = Integer.valueOf(lukija.nextLine());
         toka = Integer.valueOf(lukija.nextLine());
 
-        // Selvitetään laskuoperaatio ja luodaan laskuoperaation tulokselle muuttuja
+        // Selvitetään laskuoperaatio ja luodaan laskuoperaation
+        // tulokselle muuttuja
         int tulo = eka * toka;
 
         // Tulostetaan laskuoperaation tulos
@@ -199,8 +195,8 @@ Ongelmat sisältävät usein vaihtoehtoista toiminnallisuutta. Tällaisen toteut
 
 
 ```java
-// jos ...
-if (<em>lauseke</em>) {
+// jos luku on suurempi kuin viisi
+if (luku > 5) {
     // niin...
 }
 ```
@@ -210,11 +206,12 @@ Ehtolauseiden ketjuttaminen on mahdollista. Tällöin ongelmat ovat muotoa "jos 
 
 
 ```java
-if (<em>lauseke yksi</em>) { // jos ...
-    // toiminnallisuus kun lauseke yksi on totta
-} else if (<em>lauseke kaksi</em>) { // muulloin jos 
-    // toiminnallisuus kun lauseke kaksi on totta
-    // ja lauseke yksi on epätotta
+// jos luku on suurempi kuin viisi
+if (luku > 5) {
+    // toiminnallisuus kun luku suurempi kuin viisi
+} else if (luku < 0) { // muulloin jos luku on pienempi kuin nolla
+    // toiminnallisuus kun luku on pienempi kuin nolla
+    // ja luku EI OLE suurempi kuin viisi
 } else {  // muulloin
     // toiminnallisuus muulloin
 }
@@ -248,7 +245,8 @@ public class Ohjelma {
         int eka = Integer.valueOf(lukija.nextLine());
         int toka = Integer.valueOf(lukija.nextLine());
 
-        // Selvitetään laskuoperaatio ja luodaan laskuoperaation tulokselle muuttuja
+        // Selvitetään laskuoperaatio ja luodaan laskuoperaation
+        // tulokselle muuttuja
         int summa = eka + toka;
 
         // Tehdään laskuoperaation tuloksella jotain. Tässä
@@ -406,12 +404,11 @@ _Lue käyttäjältä kokonaislukuja kunnes käyttäjä syöttää luvun nolla. T
 
 Yllä kuvatussa tehtävänannossa on monta osaa:
 
-<ul>
-  <li>lukeminen: ohjelman tulee lukea käyttäjältä kokonaislukuja</li>
-  <li>laskeminen: ohjelman tulee laskea käyttäjän syöttämien lukujen keskiarvo</li>
-  <li>ehdollinen toiminta (jos ... niin ...): ohjelman lopussa tehtävä tulostus riippuu käyttäjän syöttämien lukujen keskiarvosta</li>
-  <li>toistolause (lue käyttäjältä kunnes): ohjelman tulee lukea käyttäjältä syötettä kunnes käyttäjä syöttää luvun nolla</li>
-</ul>
+* lukeminen: ohjelman tulee lukea käyttäjältä kokonaislukuja
+* laskeminen: ohjelman tulee laskea käyttäjän syöttämien lukujen keskiarvo
+* ehdollinen toiminta (jos ... niin ...): ohjelman lopussa tehtävä tulostus riippuu käyttäjän syöttämien lukujen keskiarvosta
+* toistolause (lue käyttäjältä kunnes): ohjelman tulee lukea käyttäjältä syötettä kunnes käyttäjä syöttää luvun nolla
+
 
 Tarkastellaan näitä osia ensin erikseen.
 
@@ -777,12 +774,13 @@ public class Ohjelma {
             String syote = lukija.nextLine();
 
             // kunnes 
-            if (<em>poistuminen</em>) {
+            if (syote.equals("lopeta")) { // poistuminen
                 break;
             }
 
             // rajausehto
-            if (<em>rajaus</em>) {
+            int luku = Integer.valueOf(syote);
+            if (luku > 10) { // rajaus
                 continue;
             }
 
@@ -919,6 +917,9 @@ keskiarvon laskeminen ei ole mahdollista
 
 <text-box variant='hint' name='Osaongelmien tunnistaminen ja ratkaiseminen'>
 
-Tutki ongelman kuvausta tai tehtävänantoa ja tunnista ongelmaan liittyvät avainsanat kuten "lue kunnes" tai "lue kokonaislukuja". Kullekin avainsanalle, tunnista niihin liittyvät ratkaisumallit, ja ota ratkaisumallit käyttöön. Mikäli ongelmaan liittyy aiemmin tuntemattomia osaongelmia, eriytä osaongelma ensin erilleen kaikesta muusta ja harjoittele sen ratkaisemista -- yrittäminen (ja erehtyminen) on tärkeää!. Kun aiemmin tuntemattomat osaongelmat ja niiden ratkaisut alkavat tulla tutuiksi, yhdistä osaongelman ratkaisu osaksi isomman ongelman ratkaisua.
+* Tutki ongelman kuvausta tai tehtävänantoa ja tunnista ongelmaan liittyvät avainsanat kuten "lue kunnes" tai "lue kokonaislukuja".
+* Kullekin avainsanalle, tunnista niihin liittyvät ratkaisumallit, ja ota ratkaisumallit käyttöön.
+* Mikäli ongelmaan liittyy aiemmin tuntemattomia osaongelmia, eriytä osaongelma ensin erilleen kaikesta muusta ja harjoittele sen ratkaisemista -- yrittäminen (ja erehtyminen) on tärkeää!.
+* Yhdistä osat yksi kerrallaan ja muodosta niistä ratkaisu.
 
 </text-box>

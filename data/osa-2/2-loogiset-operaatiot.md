@@ -13,9 +13,11 @@ title: 'Loogiset operaatiot'
 
 Materiaalin esimerkeissä ja tehtävissä käytetyt ehtolauseet ovat tähän mennessä käyttäneet yksinkertaisia lausekkeita, joilla on tarkasteltu ehtolauseeseen ja toistolauseeseen liittyvän lähdekoodin suorittamista. Esim.
 
-```java 
-if (<em>lauseke</em>) {
-    System.out.println("Suoritetaan jos lausekkeen arvo on true");
+```java
+int luku = 10;
+
+if (luku == 0) { // lauseke
+    System.out.println("Suoritetaan jos luku == 0 on totta");
 }
 ```
 
@@ -33,7 +35,11 @@ Luku on parillinen
 
 </sample-output>
 
-Ehtolauseen lauseke voi koostua myös useammasta osasta, joissa käytetään loogisia operaatioita **ja** `&&`, **tai** `||`, sekä **ei** `!`. Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään ja-operaatiolla, on totta jos ja vain jos yhdistettävistä lausekkeista evaluoituvat todeksi. Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään tai-operaatiolla, on totta jos jompikumpi tai molemmat yhdistettävistä lausekkeista evaluoituvat todeksi. Loogista operaatiota ei käytetään totuusarvon muuntamiseen truesta falseksi tai falsesta trueksi.
+Ehtolauseen lauseke voi koostua useammasta osasta, joissa käytetään loogisia operaatioita **ja** `&&`, **tai** `||`, sekä **ei** `!`. 
+
+* Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään ja-operaatiolla, on totta jos ja vain jos yhdistettävistä lausekkeista evaluoituvat todeksi. 
+* Kahdesta lausekkeesta koostuva lauseke, joka yhdistetään tai-operaatiolla, on totta jos jompikumpi tai molemmat yhdistettävistä lausekkeista evaluoituvat todeksi. 
+* Loogista operaatiota ei käytetään totuusarvon muuntamiseen truesta falseksi tai falsesta trueksi.
 
 Seuraavassa yhdistetään `&&`:lla eli ja-operaatiolla kaksi yksittäistä ehtoa. Koodilla tarkistetaan, onko muuttujassa oleva luku suurempi kuin 4 ja pienempi kuin 11, eli siis välillä 5-10:
 
@@ -98,134 +104,15 @@ Luku on suurempi tai yhtäsuuri kuin 4.
 Alla on kuvattuna lausekkeiden toimintaa kun lausekkeissa on loogisia operaatioita.
 
 
-<table class="table">
-  <tr>
-    <th>
-      luku
-    </th>
-    <th>
-      luku > 0
-    </th>
-    <th>
-      luku < 10
-    </th>
-    <th>
-      luku > 0 && luku < 10
-    </th>
-    <th>
-      !(luku > 0 && luku < 10)
-    </th>
-    <th>
-      luku > 0 || luku < 10
-    </th>
-  </tr>
 
-  <tr>
-    <td>
-      -1
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-  </tr>
+| luku  | luku > 0  | luku < 10  | luku > 0 && luku < 10  | !(luku > 0 && luku < 10)  | luku > 0 \|\| luku < 10  |
+| ----- | --------- | ---------- | ---------------------- | ------------------------- | ---------------------- |
+| -1    | false     | true       | false                  | true                      | true                   |
+| 0     | false     | true       | false                  | true                      | true                   |
+| 1     | true      | true       | true                   | false                     | true                   |
+| 9     | true      | true       | true                   | false                     | true                   |
+| 10    | true      | false      | false                  | true                      | true                   |
 
-  <tr>
-    <td>
-      0
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      1
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      9
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      10
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      false
-    </td>
-    <td>
-      true
-    </td>
-    <td>
-      true
-    </td>
-  </tr>
-
-</table>
 
 
 <programming-exercise name='Iän tarkistus' tmcname='osa01-Osa01_02.AdaLovelace'>
@@ -1004,11 +891,3 @@ System.out.println("Hyväksyttyjä lukuja: " + hyvaksytytLuvut);
 System.out.println("Epäkelvot luvut: " + epakelvotLuvut);
 ```
 
-
-<text-box variant='hint' name='Ikuinen debaatti: break'>
-
-Opittavan ja käytettävän toistolauseen ominaisuuksia on tarkasteltu ohjelmoinnin opetukseen liittyvässä tutkimuksessa pitkään. Eräs debaatti liittyy `break`-komennon käyttöön. Jotkut ovat sitä mieltä, että sen käyttäminen on yleisesti ottaen hyvä käytäntö, toiset taas ovat sitä mieltä, että se toimii esimerkiksi toistolauseen käyttöön tutustumisessa. Jotkut taas eivät suosi sen käyttämistä lainkaan.
-
-TODO: laita omaan verkkoon break statement considered tai sitten joku goto considered harmful?
-
-</text-box>
