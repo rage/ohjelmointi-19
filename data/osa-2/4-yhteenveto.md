@@ -8,4 +8,4 @@ Toisessa osassa kerrattiin tulostamista, muuttujia, laskemista, syötteen käsit
 
 Vastaa vielä alla olevaan kyselyyn.
 
-<quiznator id="5b9421fc2f41423c1e91efd9"></quiznator>
+<quiznator id="5c24a8cd054d71123e35d3b8"></quiznator>

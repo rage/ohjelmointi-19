@@ -11,6 +11,7 @@ title: 'Ongelman osia ja niiden ratkaisumalleja'
 
 </text-box>
 
+<quiznator id="5c24a9123cc3ec11bcd78bb3"></quiznator>
 
 Samat pienet ongelmat (tai "osaongelmat") toistuvat ohjelmissa yhä uudestaan ja uudestaan: "Lue käyttäjältä syötettä", "Laske lukujen summa", "Laske lukujen keskiarvo",  "Lue käyttäjältä syötettä kunnes", "Montako lukua käyttäjä on syöttänyt.", jne. 
 
