@@ -156,13 +156,18 @@ export function updatePassword(currentPassword, password, confirmPassword) {
 }
 
 export async function fetchProgrammingExerciseDetails(exerciseName) {
+  const accessTokenValue = accessToken()
+  const headers = {
+    "Content-Type": "application/json",
+  }
+  if (accessTokenValue) {
+    headers["Authorization"] = `Bearer ${accessTokenValue}`
+  }
+  console.log(exerciseName, headers)
   const res = await axios.get(
     `${BASE_URL}/org/${ORGANIZATION}/courses/${await getCourse()}/exercises/${exerciseName}`,
     {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken()}`,
-      },
+      headers: headers,
     },
   )
   return res.data
@@ -222,6 +227,9 @@ export async function getCourseVariant() {
 }
 
 async function getCourse() {
+  if (!accessToken()) {
+    return "2019-ohjelmointi"
+  }
   const variant = await getCourseVariant()
   if (variant === "nodl") {
     return "2019-ohjelmointi-nodl"
