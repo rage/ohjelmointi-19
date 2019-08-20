@@ -182,7 +182,7 @@ Vinkki! Saat neliöjuuren laskettua komennolla `Math.sqrt` seuraavasti:
 
 ```java
 int luku = 42;
-double neliojuuri = Math.sqrt(42);
+double neliojuuri = Math.sqrt(luku);
 System.out.println(neliojuuri);
 ```
 
