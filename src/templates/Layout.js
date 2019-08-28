@@ -7,7 +7,6 @@ import { StaticQuery, graphql } from "gatsby"
 import * as store from "store"
 import Pheromones from "../util/pheromones"
 import styled from "styled-components"
-
 import courseMetaData from "../../course-metadata.json"
 
 import "./reboot.css"

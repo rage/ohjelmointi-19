@@ -1,5 +1,5 @@
 import React from "react"
-
+import i18n from "../i18n"
 import Layout from "../templates/Layout"
 import Banner from "../components/Banner"
 import GatsbyLink from "gatsby-link"
