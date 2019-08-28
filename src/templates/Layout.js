@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import "../i18n"
 import Helmet from "react-helmet"
 import Sidebar from "../components/Sidebar"
 import ContentArea from "../components/ContentArea"

@@ -30,4 +30,5 @@ i18n.use(initReactI18next).init({
   },
   lng: courseSettings.language,
 })
+
 export default i18n
