@@ -1,5 +1,5 @@
 const courseSettings = {
-    "language":"en"
+    "language":"fi"
 }
 
 export default courseSettings

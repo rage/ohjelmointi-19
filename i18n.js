@@ -1,16 +1,32 @@
-
 import i18n from "i18next"
-import Backend from "i18next-xhr-backend"
 import { initReactI18next } from "react-i18next"
 import courseSettings from "./course-settings"
+import commonEN from "./public/locales/en/common"
+import pointsBalloonEN from "./public/locales/en/points-balloon"
+import userEN from "./public/locales/en/user"
+import commonFI from "./public/locales/fi/common"
+import pointsBalloonFI from "./public/locales/fi/points-balloon"
+import userFI from "./public/locales/fi/user"
+
+const resources = {
+  en:{
+    common: commonEN,
+    "points-balloon": pointsBalloonEN,
+    user: userEN
+  },
+  fi: {
+    common: commonFI,
+    "points-balloon": pointsBalloonFI,
+    user:userFI
+  }
+}
+
 i18n
-  .use(Backend)
   .use(initReactI18next)
   .init({
-    fallbackLng: "en",
+    resources,
     ns: ["common", "user", "points-balloon"],
     defaultNS: "common",
-    debug: true,
     react: {
       wait: true,
     },
