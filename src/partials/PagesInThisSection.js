@@ -104,4 +104,6 @@ const PagesInThisSection = ({ style, t }) => (
   </PagesContext.Consumer>
 )
 
-export default withTranslation(withSimpleErrorBoundary(PagesInThisSection))
+export default withTranslation("common")(
+  withSimpleErrorBoundary(PagesInThisSection),
+)
