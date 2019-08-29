@@ -1,6 +1,6 @@
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
-import courseSettings from "../course-settings"
+import CourseSettings from "../course-settings"
 import commonEN from "./locales/common/en"
 import pointsBalloonEN from "./locales/pointsBalloon/en"
 import userEN from "./locales/user/en"
@@ -28,7 +28,7 @@ i18n.use(initReactI18next).init({
   react: {
     wait: true,
   },
-  lng: courseSettings.language,
+  lng: CourseSettings.default.language,
 })
 
 export default i18n

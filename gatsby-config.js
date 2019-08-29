@@ -5,7 +5,7 @@ const courseSettings = require('./course-settings').default
 
 module.exports = {
   siteMetadata: {
-    title: courseSettings.name,
+    title: CourseSettings.name,
     siteUrl: `https://ohjelmointi-19.mooc.fi`,
   },
   plugins: [

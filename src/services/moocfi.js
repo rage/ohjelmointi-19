@@ -34,7 +34,7 @@ export function createAccount(data) {
   data.username = uuidv4()
   const body = {
     user: data,
-    origin: CourseSettings.name,
+    origin: CourseSettings.default.name,
     language: "fi",
   }
   return new Promise((resolve, reject) => {
@@ -88,7 +88,7 @@ export function onLoginStateChanged(callback) {
 
 export async function userDetails() {
   const res = await axios.get(
-    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=${CourseSettings.slug}`,
+    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=${CourseSettings.default.slug}`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ export async function updateUserDetails({ extraFields, userField }) {
     {
       user: {
         extra_fields: {
-          namespace: CourseSettings.slug,
+          namespace: CourseSettings.default.slug,
           data: extraFields,
         },
       },
