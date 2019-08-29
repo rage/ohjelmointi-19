@@ -5,4 +5,6 @@ const courseSettings = {
   slug: "ohjelmoinnin-mooc-2019"
 }
 
-export default courseSettings
+module.exports = {
+  default: courseSettings
+}
