@@ -57,4 +57,4 @@ class QuizPartial extends React.Component {
   }
 }
 
-export default withTranslation(withSimpleErrorBoundary(QuizPartial))
+export default withTranslation("common")(withSimpleErrorBoundary(QuizPartial))
