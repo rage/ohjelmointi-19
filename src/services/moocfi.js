@@ -3,6 +3,7 @@ import fetchPonyfill from "fetch-ponyfill"
 import axios from "axios"
 import * as store from "store"
 import uuidv4 from "uuid/v4"
+import CourseSettings from "../../course-settings"
 
 const { fetch } = fetchPonyfill()
 const BASE_URL = "https://tmc.mooc.fi/api/v8"
@@ -33,7 +34,7 @@ export function createAccount(data) {
   data.username = uuidv4()
   const body = {
     user: data,
-    origin: "Ohjelmoinnin MOOC 2019",
+    origin: CourseSettings.name,
     language: "fi",
   }
   return new Promise((resolve, reject) => {
@@ -87,7 +88,7 @@ export function onLoginStateChanged(callback) {
 
 export async function userDetails() {
   const res = await axios.get(
-    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=ohjelmoinnin-mooc-2019`,
+    `${BASE_URL}/users/current?show_user_fields=true&extra_fields=${CourseSettings.slug}`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -128,7 +129,7 @@ export async function updateUserDetails({ extraFields, userField }) {
     {
       user: {
         extra_fields: {
-          namespace: "ohjelmoinnin-mooc-2019",
+          namespace: CourseSettings.slug,
           data: extraFields,
         },
       },

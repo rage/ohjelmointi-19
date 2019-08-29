@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, StaticQuery } from "gatsby"
 import { Button } from "@material-ui/core"
+import CourseSettings from "../../course-settings"
 
 import Logo from "./Logo"
 import TreeView from "./TreeView"
@@ -188,7 +189,7 @@ class Sidebar extends React.Component {
           </Button>
         </MenuExpanderWrapper>
         <SidebarContainer mobileMenuOpen={this.props.mobileMenuOpen}>
-          <Brand>Ohjelmoinnin MOOC 2019</Brand>
+          <Brand>{CourseSettings.name}</Brand>
           <TreeViewContainer>
             <TreeView data={content} />
           </TreeViewContainer>

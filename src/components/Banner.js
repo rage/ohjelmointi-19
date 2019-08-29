@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Bruce from "../images/banner.svg"
 import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
+import CourseSettings from "../../course-settings"
 
 const BannerWrapper = styled.header`
   height: 30rem;
@@ -50,8 +51,8 @@ const SubHeading = styled.div`
 
 const Banner = () => (
   <BannerWrapper>
-    <Heading>Ohjelmoinnin MOOC 2019</Heading>
-    <SubHeading>Ohjelmoinnin alkeet kaikille, ilmaiseksi</SubHeading>
+    <Heading>{CourseSettings.name}</Heading>
+    <SubHeading>{CourseSettings.subtitle}</SubHeading>
   </BannerWrapper>
 )
 
