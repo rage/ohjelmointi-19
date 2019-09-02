@@ -7,7 +7,7 @@ import CourseSettings from "../../course-settings"
 
 const { fetch } = fetchPonyfill()
 const BASE_URL = "https://tmc.mooc.fi/api/v8"
-const ORGANIZATION = "mooc"
+const ORGANIZATION = CourseSettings.default.tmcOrganization
 
 const tmcClient = new TmcClient(
   "59a09eef080463f90f8c2f29fbf63014167d13580e1de3562e57b9e6e4515182",
@@ -229,7 +229,7 @@ export async function getCourseVariant() {
 
 async function getCourse() {
   if (!accessToken()) {
-    return "2019-ohjelmointi"
+    return CourseSettings.default.tmcCourse
   }
   const variant = await getCourseVariant()
   if (variant === "nodl") {
@@ -247,5 +247,5 @@ async function getCourse() {
   if (variant === "kesa-ohja-dl") {
     return "2019-mooc-vain-jatkokurssi-kesa"
   }
-  return "2019-ohjelmointi"
+  return CourseSettings.default.tmcCourse
 }

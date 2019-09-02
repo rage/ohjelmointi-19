@@ -3,6 +3,8 @@ const courseSettings = {
   name: "Ohjelmoinnin MOOC 2019",
   subtitle: "Ohjelmoinnin alkeet kaikille, ilmaiseksi",
   slug: "ohjelmoinnin-mooc-2019",
+  tmcCourse: "2019-ohjelmointi",
+  tmcOrganization: "mooc",
   bannerPath: "banner.svg",
   sidebarEntries: [
     {
