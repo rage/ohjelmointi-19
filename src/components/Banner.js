@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import Bruce from "../images/banner.svg"
-import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 import CourseSettings from "../../course-settings"
+
+import BannerImage from "../../banner.svg"
+import withSimpleErrorBoundary from "../util/withSimpleErrorBoundary"
 
 const BannerWrapper = styled.header`
   height: 30rem;
@@ -13,7 +14,7 @@ const BannerWrapper = styled.header`
   align-items: center;
   margin-bottom: 2rem;
   background-color: #c0392b;
-  background-image: url(${Bruce});
+  background-image: url(${BannerImage});
   text-align: center;
   h1 {
   }
