@@ -96,7 +96,7 @@ const MenuExpanderWrapper = styled.div`
 
 var content2 = CourseSettings.default.sidebarEntries
 
-var futurePages = [] // { title: "Osa 14", tba: "19.4.2019" }
+var futurePages = CourseSettings.default.sidebarFuturePages
 
 const MobileWrapper = styled.div`
   @media only screen and (max-width: ${SMALL_MEDIUM_BREAKPOINT}) {
@@ -126,6 +126,7 @@ class Sidebar extends React.Component {
     if (process.env.NODE_ENV === "production") {
       edges = edges.filter(o => !o.hidden)
     }
+    edges = edges.filter(o => !o.information_page)
     edges.sort((a, b) =>
       a.title.localeCompare(b.title, undefined, {
         numeric: true,
@@ -134,11 +135,13 @@ class Sidebar extends React.Component {
     )
     let content = content2.concat(edges)
     content = content.concat(futurePages)
-    let middlepoint = content.findIndex(o => o.title === "Osa 7")
-    content.splice(middlepoint + 1, 0, {
-      separator: true,
-      title: "Ohjelmoinnin jatkokurssi",
-    })
+    if (CourseSettings.default.splitCourses) {
+      let middlepoint = content.findIndex(o => o.title === "Osa 7")
+      content.splice(middlepoint + 1, 0, {
+        separator: true,
+        title: "Ohjelmoinnin jatkokurssi",
+      })
+    }
 
     return (
       <MobileWrapperOrFragment mobileMenuOpen={this.props.mobileMenuOpen}>
@@ -186,6 +189,7 @@ const query = graphql`
           id
           frontmatter {
             title
+            information_page
             path
             hidden
           }
