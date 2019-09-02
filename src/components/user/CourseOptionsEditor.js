@@ -148,7 +148,7 @@ class CourseOptionsEditor extends React.Component {
           <InfoBox>
             <Card>
               <CardContent>
-                {this.props.t("LoggedInWith")}
+                {this.props.t("loggedInWith")}
                 {this.state.email}
               </CardContent>
             </Card>
