@@ -94,34 +94,7 @@ const MenuExpanderWrapper = styled.div`
   }
 `
 
-var content2 = [
-  {
-    title: "Tietoa kurssista",
-    path: "/",
-  },
-  {
-    title: "Osaamistavoitteet",
-    path: "/osaamistavoitteet",
-  },
-  {
-    title: "Arvostelu ja kokeet",
-    path: "/arvostelu-ja-kokeet",
-  },
-  {
-    title: "Mahdollisuus opinto-oikeuteen",
-    path: "/opinto-oikeus",
-  },
-  { title: "Tukiväylät", path: "/tukivaylat" },
-  {
-    title: "Opettajille ja opinto-ohjaajille",
-    path: "/opettajille",
-  },
-  {
-    title: "Usein kysytyt kysymykset",
-    path: "/usein-kysytyt-kysymykset",
-  },
-  { separator: true, title: "Ohjelmoinnin perusteet" },
-]
+var content2 = CourseSettings.default.sidebarEntries
 
 var futurePages = [] // { title: "Osa 14", tba: "19.4.2019" }
 
