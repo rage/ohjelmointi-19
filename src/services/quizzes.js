@@ -3,6 +3,9 @@ import { accessToken } from "./moocfi"
 import CourseSettings from "../../course-settings"
 
 const id = CourseSettings.default.quizzesId
+const language = CourseSettings.default.language
+
+const quizzesLanguage = language === "en" ? "en_US" : "fi_FI"
 
 export async function fetchQuizzesProgress() {
   const response = await axios.get(
@@ -14,7 +17,7 @@ export async function fetchQuizzesProgress() {
 
 export async function fetchQuizNames() {
   const response = await axios.get(
-    `https://quizzes.mooc.fi/api/v1/quizzes/${id}/titles/fi_FI`,
+    `https://quizzes.mooc.fi/api/v1/quizzes/${id}/titles/${quizzesLanguage}`,
   )
   return response.data
 }
