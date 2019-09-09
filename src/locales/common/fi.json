@@ -21,7 +21,7 @@
     "pleaseLogin":"Et ole kirjautunut sisään. Kaikki materiaalin osat eivät toimi ilman sisäänkirjautumista. Pääset kirjautumaan materiaaliin tästä:",
     "inThisSection":"Tässä osassa:" ,
     "programmingExercise":"Ohjelmointitehtävä:",
-    "mooodleExercise": "Moodle tehtävä:",
+    "moodleExercise": "Moodle tehtävä:",
     "sqlTrainerExercise": "SQL trainer tehtävä:",
     "points":"Pisteitä",
     "submitNB":"Huom! Voit saada yksittäisen osan ratkaisusta osan tehtävän pisteistä käyttämällä NetBeansin 'submit'-nappia. Lisätietoa ohjelmointitehtävien palautusohjeissa:",
