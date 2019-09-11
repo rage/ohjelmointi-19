@@ -162,7 +162,7 @@ class CreateAccountForm extends React.Component {
             >
               mooc.fi
             </OutboundLink>{" "}
-            {this.props.t("courseUses")}
+            {this.props.t("courseUses2")}
           </InfoBox>
 
           <Row>
