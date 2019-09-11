@@ -6,6 +6,8 @@ const quizRegex = /<\s*quiz\s*id\s*=\s*['"]\s*([\w-]+)\s*['"]\s*>/gm
 const crowdsorcererRegex = /<\s*crowdsorcerer\s*id\s*=\s*['"]\s*(\w+)\s*['"].*>/gm
 const programmingExerciseTagRegex = /<\s*programming-exercise\s+(.*)\s*>/gm
 const programmingExerciseNameRegex = /\bname\s*=\s*(["].*?["]|['].*?['])/gm
+const moodleRegex = /<\s*moodle-exercise\s*name\s*=\s*['"]\s*(.*)\s*['"]\s*>/gm
+const sqlTrainerRegex = /<\s*sqltrainer-exercise\s*name\s*=\s*['"]\s*(.*)\s*['"]\s*>/gm
 
 function getMatches(string, regex, index) {
   index || (index = 1) // default to the first capturing group
@@ -79,18 +81,45 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
             }
           })
 
-          const crowdsorcerers = getMatches(source, crowdsorcererRegex, 1).map(res => {
+          const crowdsorcerers = getMatches(source, crowdsorcererRegex, 1).map(
+            res => {
+              return {
+                id: res.match,
+                location: res.location,
+                type: "crowdsorcerer",
+                parentPagePath: node.frontmatter.path,
+              }
+            },
+          )
+
+          const moodles = getMatches(source, moodleRegex, 1).map(res => {
             return {
               id: res.match,
               location: res.location,
-              type: "crowdsorcerer",
+              type: "moodle-exercise",
               parentPagePath: node.frontmatter.path,
             }
           })
 
-          return programmingExercises.concat(quizzes).concat(crowdsorcerers).sort(function(a, b) {
-            return a.location - b.location
-          })
+          const sqlTrainers = getMatches(source, sqlTrainerRegex, 1).map(
+            res => {
+              return {
+                id: res.match,
+                location: res.location,
+                type: "sqltrainer-exercise",
+                parentPagePath: node.frontmatter.path,
+              }
+            },
+          )
+
+          return programmingExercises
+            .concat(quizzes)
+            .concat(crowdsorcerers)
+            .concat(moodles)
+            .concat(sqlTrainers)
+            .sort(function(a, b) {
+              return a.location - b.location
+            })
         },
       },
     }

@@ -1,9 +1,11 @@
 const red = require("@material-ui/core/colors/red").default
 const blue = require("@material-ui/core/colors/red").default
 
+const CourseSettings = require('./course-settings').default
+
 module.exports = {
   siteMetadata: {
-    title: "Ohjelmoinnin MOOC 2019",
+    title: CourseSettings.name,
     siteUrl: `https://ohjelmointi-19.mooc.fi`,
   },
   plugins: [
