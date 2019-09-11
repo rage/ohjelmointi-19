@@ -20,11 +20,13 @@
     "courseUses":"This course uses",
     "courseUses2":"accounts. If you have previously done mooc.fi -courses, you can log in with your existing account. On this page you can create a new account, which works on majority of mooc.fi courses and services.",
     "email":"E-mail address",
-    "password":"Password",
+    "emailUsername":"e-mail or username",
+    "password":"password",
     "passwordAgain":"Repeat password",
     "create":"Create an account",
     "alreadyHaveAccount":" Already have an account? Log in",
-    "error":"Error: "
-
+    "error":"Error: ",
+    "forgottenPW":"Forgot your password?",
+    "wrongDetails":"Something is wrong with the login details, please check them for any typos!"
 }
 
