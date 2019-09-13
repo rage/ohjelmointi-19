@@ -8,6 +8,8 @@ const programmingExerciseTagRegex = /<\s*programming-exercise\s+(.*)\s*>/gm
 const programmingExerciseNameRegex = /\bname\s*=\s*(["].*?["]|['].*?['])/gm
 const moodleRegex = /<\s*moodle-exercise\s*name\s*=\s*['"]\s*(.*)\s*['"]\s*>/gm
 const sqlTrainerRegex = /<\s*sqltrainer-exercise\s*name\s*=\s*['"]\s*(.*)\s*['"]\s*>/gm
+const commentRegex = /<!--.*?-->/mgs
+
 
 function getMatches(string, regex, index) {
   index || (index = 1) // default to the first capturing group
@@ -50,7 +52,8 @@ exports.setFieldsOnGraphQLNodeType = ({ type }) => {
       moocfiExercises: {
         type: GraphQLList(ExerciseType),
         resolve: (node, _fieldArgs) => {
-          const source = node.rawMarkdownBody
+          // nuke commented text
+          const source = (node.rawMarkdownBody || "").replace(commentRegex, "")
           const quizzes = getMatches(source, quizRegex, 1).map(res => {
             return {
               id: res.match,
