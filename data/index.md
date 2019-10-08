@@ -39,6 +39,14 @@ opinto-oikeutta.
 Kurssin osat 1-7 vastaavat kurssia Ohjelmoinnin perusteet. Osat 8-14
 vastaavat kurssia Ohjelmoinnin jatkokurssi.
 
+### Aikataulu - syksy 2019
+
+Sykysyllä 2019 kurssista on auki aikatauluton versio, jota voi tehdä vuoden loppuun asti.
+Muita deadlinejä kurssilla ei ole.
+Jos lähdet tekemään tätä, valitse kurssin profiilista kohdasta "Minkä
+kurssin version pisteet, deadlinet ja kolikot haluat nähdä."
+vaihtoehto "Aikatauluton Ohjelmoinnin MOOC"
+
 ### Aikataulu - kesä 2019
 
 
