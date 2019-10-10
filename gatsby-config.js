@@ -6,7 +6,7 @@ const CourseSettings = require('./course-settings').default
 module.exports = {
   siteMetadata: {
     title: CourseSettings.name,
-    siteUrl: `https://ohjelmointi-19.mooc.fi`,
+    siteUrl: CourseSettings.siteUrl,
   },
   plugins: [
     "gatsby-plugin-react-helmet",

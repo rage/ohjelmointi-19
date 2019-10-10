@@ -1,6 +1,7 @@
 const courseSettings = {
   language: "fi",
   name: "Ohjelmoinnin MOOC 2019",
+  siteUrl: "https://ohjelmointi-19.mooc.fi",
   subtitle: "Ohjelmoinnin alkeet kaikille, ilmaiseksi",
   slug: "ohjelmoinnin-mooc-2019",
   tmcCourse: "2019-ohjelmointi",
