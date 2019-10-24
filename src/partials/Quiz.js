@@ -22,6 +22,10 @@ class QuizPartial extends React.Component {
 
   render() {
     const { id, t } = this.props
+    let languageId = "en_US"
+    if (CourseSettings.default.language === "fi") {
+      languageId = "fi_FI"
+    }
     if (!this.context.loggedIn) {
       const loginPrompt = (
         <div style={{ padding: "1rem", textAlign: "center" }}>
@@ -29,11 +33,6 @@ class QuizPartial extends React.Component {
           <LoginControls />
         </div>
       )
-
-      let languageId = "en_US"
-      if (CourseSettings.default.language == "fi") {
-        languageId = "fi_FI"
-      }
 
       return (
         <StyledPaper id={normalizeExerciseId(`quiz-${id}`)}>
