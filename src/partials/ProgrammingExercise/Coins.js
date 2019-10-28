@@ -80,7 +80,7 @@ class Coins extends Component {
                     </Trans>
                   </span>
                 ) : (
-                  <span>{this.props.t("noCoins")}</span>
+                  <span>{this.props.t("nocoins")}</span>
                 )}
               </p>
               <p>{this.props.t("howCoins")}</p>

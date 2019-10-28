@@ -310,7 +310,7 @@ class ProgrammingExercise extends React.Component {
                 <ExtraDetails
                   exerciseDetails={this.state.exerciseDetails}
                   onUpdate={this.onUpdate}
-                  noCoins={this.props.noCoins}
+                  nocoins={this.props.nocoins}
                 />
               </div>
             )}
