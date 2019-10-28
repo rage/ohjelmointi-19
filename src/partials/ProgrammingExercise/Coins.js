@@ -48,9 +48,9 @@ class Coins extends Component {
   }
 
   render() {
-    const { exerciseDetails, noCoins } = this.props
+    const { exerciseDetails, nocoins } = this.props
 
-    if (noCoins) {
+    if (nocoins) {
       return <TokenContainer>{this.props.t("noCoin")}</TokenContainer>
     }
     const tokenThreshHold =
