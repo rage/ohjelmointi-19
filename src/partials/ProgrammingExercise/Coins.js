@@ -114,7 +114,6 @@ class Coins extends Component {
                 <ModalContent>
                   <h1>{this.props.t("solution")}</h1>
                   {this.state.modelSolution.solution.files.map(fileEntry => {
-                    console.log(fileEntry)
                     return (
                       <Card>
                         <CardContent>
