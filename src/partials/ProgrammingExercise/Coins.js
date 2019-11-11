@@ -53,6 +53,14 @@ class Coins extends Component {
     if (nocoins) {
       return <TokenContainer>{this.props.t("noCoin")}</TokenContainer>
     }
+
+    if (!exerciseDetails.email_verified) {
+      return (
+        <TokenContainer>
+          {this.props.t("modelSolutionUnavailableBecauseEmailNotVerified")}
+        </TokenContainer>
+      )
+    }
     const tokenThreshHold =
       exerciseDetails?.course
         ?.grant_model_solution_token_every_nth_completed_exercise

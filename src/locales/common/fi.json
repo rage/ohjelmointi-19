@@ -32,6 +32,7 @@
     "here":"täältä",
     "solutionHowTo":"Miten katsoa mallivastaus",
     "noCoin":"Tässä tehtävässä ei voi käyttää kolikkoa mallivastauksen katsomiseen ennen tehtävän ratkaisua.",
+    "modelSolutionUnavailableBecauseEmailNotVerified": "Vahvista sähköpostiosoitteesi ennen kuin voit katsoa mallivastauksia.",
     "whyCoin":"Mallivastauksen voi katsoa joko ennen tehtävän ratkaisemista tai tehtävän ratkaisemisen jälkeen. Jos haluat katsoa vastauksen ennen ratkaisemista, joudut käyttämään mallivastauskolikoita.",
     "getNewCoin":"Saat aina uuden mallivastauskolikon, kun olet saanut",
     "getNewCoin2":"tehtävää tehtyä. Kolikoilla voi ostaa tehtävien vastauksia ja lunastaa itsesi mahdollisesta jumista.",
