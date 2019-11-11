@@ -1,76 +1,37 @@
 import React from "react"
-import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
-import CourseSettings from "../../../course-settings"
+import PointsImpl from "./PointsImpl"
+import ApolloClient from "apollo-boost"
+import { ApolloProvider } from "@apollo/react-hooks"
 
-import { useQuery } from "@apollo/react-hooks"
-import { gql } from "apollo-boost"
-import { Button } from "@material-ui/core"
-import OverallPoints from "./OverallPoints"
-
-const PROGRESS = gql`
-  {
-    currentUser {
-      email
-      progress(course_id: "59314cb4-a9ca-43c9-b9a7-58c19325b44c") {
-        course {
-          id
-          name
-        }
-        user_course_progress {
-          id
-          progress
-        }
-        user_course_service_progresses {
-          id
-          progress
-          service {
-            id
-            name
-          }
-        }
-      }
+export default class Points extends React.Component {
+  state = {
+    render: false,
+  }
+  componentDidMount() {
+    this.setState({ render: true })
+  }
+  render() {
+    if (!this.state.render) {
+      return <div>Loading...</div>
     }
-  }
-`
-
-const Points = props => {
-  const course = props.course || CourseSettings.default.slug
-  const { data, loading, error, refetch } = useQuery(PROGRESS)
-
-  if (loading) {
-    return <>Loading...</>
-  }
-
-  if (error) {
-    return <>Error while fetching progress: {error}</>
-  }
-
-  if (!data || !data.currentUser) {
+    const apolloClient = new ApolloClient({
+      uri: "https://www.mooc.fi/api",
+      request: async operation => {
+        const token = accessToken()
+        if (!token) {
+          return
+        }
+        operation.setContext({
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+      },
+    })
     return (
-      <>
-        <Button
-          onClick={() => {
-            refetch()
-          }}
-        >
-          Refresh
-        </Button>
-        <p>Please log in to see your points.</p>
-      </>
+      <ApolloProvider client={apolloClient}>
+        <PointsImpl />{" "}
+      </ApolloProvider>
     )
   }
-
-  const points = data.currentUser.progress.user_course_progress.progress[0]
-  const courseName = data.currentUser.progress.course.name
-  return (
-    <>
-      <OverallPoints
-        refetch={refetch}
-        courseName={courseName}
-        progress={data.currentUser.progress}
-      />
-    </>
-  )
 }
-
-export default withSimpleErrorBoundary(Points)
