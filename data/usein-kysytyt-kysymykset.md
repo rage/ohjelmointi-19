@@ -189,3 +189,9 @@ Voit tarkistaa mikä krussiversio sinulla on NetBeansissä valitsemalla TMC -> S
 Valitse sivun yläkulmasta oma profiilisi. Valitse vetovalikossa *"Minkä kurssin version pisteet, deadlinet ja kolikot haluat nähdä?"* sama kurssin versio mitä olet tekemässä NetBeansissä.
 
 Voit tarkistaa mikä krussiversio sinulla on NetBeansissä valitsemalla TMC -> Settings
+
+### NetBeans antaa virheen 'Cannot run program "cmd"' kun teen tehtäviä
+
+Käytössäsi on todennäköisesti hyvin tuore Java 8 JDK. Ainakin versiolla 8u321 kyseinen virheviesti saattaa ilmaantua. Yksinkertaisinta lienee poistaa nykyinen asennus ja asentaa versio [8u221](https://www.oracle.com/java/technologies/jdk8-downloads.html) tai sitä vanhempi julkaisu.
+
+Toinen mahdollisuus on lisätä "-J-Djdk.lang.Process.allowAmbiguousCommands=true" default_options-kohtaan tiedostossa ".../tmcbeans/etc/tmcbeans.conf" (missä tmcbeans on kansio, johon olet tmcbeanssin asentanut).
