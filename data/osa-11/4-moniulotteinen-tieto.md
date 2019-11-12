@@ -11,18 +11,115 @@ hidden: false
 
 </text-box>
 
-Aiemmat esimerkkimme ovat käsitelleet yksiulotteisia taulukoita, missä indeksi kertoo sijainnin yhdessä ulottuvuudessa. Taulukon voi luoda myös useampiulotteisena, jolloin taulukossa olevaa tietoa voi tarkastella useamman indeksin avulla. Tämä on kätevää esimerkiksi silloin, jos tieto on useampiulotteista kuten esimerkiksi koordinaatistossa.
+Tutustu allaolevaan materiaaliin, ja vastaa kyselyihin.
 
-Kaksiulotteinen taulukko, jossa on kaksi riviä ja kolme saraketta, luodaan seuraavasti:
+<ab-study id="visualization_instructional_effiency_2_f19">
 
+<!-- A1 no viewing -->
+
+<only-for-ab-group group=2>
+
+Toistaiseksi olemme käsitelleet vain yksiuloitteista tietoa yksiuloitteisissa taulukoissa, joissa indeksi kertoo tiedon sijainnin sen ainoassa ulottuvuudessa.
+
+Voimme käsitellä myös moniuloitteista tietoa moniuloitteisissa taulukoissa.
+Jos esimerkiksi haluaisimme tarkastella koirien painoja ikäryhmittäin, tarvitsisimme kaksi ulottuvuutta: ikäryhmät ja painon.
+
+Tässä tapauksessa tarvitsemme taulukon ikäryhmille, jonka jokainen alkio sisältää taulukon painoja kyseisessä ikäryhmässä.
+Yksittäisen painon saisimme käsiimme kahden indeksin avulla: indeksin ikäryhmätaulukossa ja indeksin painotaulukossa.
+
+Jos taas haluaisimme tarkastella koirien eläinlääkärinkäyntejä vuodessa ikä- ja painoryhmittäin, tarvitsemme jo kolme ulottuvuutta: iän, painon ja eläinlääkärikäyntien määrän vuodessa.
+
+Tallentaaksemme tämän, tarvitsisimme taulukon painoryhmille, jonka alkiot sisältävät taulokot ikäryhmistä kyseisessä painoryhmässä, joiden alkiot sisältävät taulukot eläinlääkärikäyntien määrästä tässä ikäryhmässä.
+Vastaavasti yksittäisen koiran eläinlääkärikäyntien määrään pääsisimme käsiksi kolmen indeksin avulla: Indeksi painotaulukossa, indeksi ikätaulukossa ja indeksi eläinlääkärikäyntien määrä taulukossa.
+
+Moniuloitteiset taulukot Javassa ovat taulukoita, joiden alkiot sisältävät taulukoita.
+Rakenteen voi ajatella niin, että ensimmäisen ulottuvuuden taulukon jokainen indeksi sisältää taulukollisen toisen ulottuvuuden arvoja kyseisessä ensimmäisen ulottuvuuden indeksissä.
 
 ```java
-int rivit = 2;
-int sarakkeet = 3;
-int[][] kaksiulotteinenTaulukko = new int[rivit][sarakkeet];
+int koko_1 = 2
+int koko_2 = 3
+int kaksiUloitteinenTaulukko[][] = new int[koko_1][koko_2]
 ```
 
-Yllä luomme taulukon, jonka jokainen rivi viittaa taulukkoon, jossa on tietty määrä sarakkeita. Kaksiulotteisen taulukon läpikäynti onnistuu kahden sisäkkäisen for-toistolauseen avulla seuraavasti:
+</only-for-ab-group>
+
+<!-- A1 viewing -->
+
+<only-for-ab-group group=1>
+
+![Moniuloitteisten taulukkojen toiminta ja rakenne](./multiDimArrayA1.jpg)
+
+
+</only-for-ab-group>
+
+<!-- A1 responding -->
+
+<only-for-ab-group group=3>
+
+<pdf-slideshow>
+
+[a](../slideshows/moniuloitteinen_interactiveA1.pdf)
+
+</pdf-slideshow>
+
+</only-for-ab-group>
+
+<!-- A2 no viewing -->
+
+<only-for-ab-group group=4>
+
+Toistaiseksi tällä kurssilla olemme käsitelleet vain yksiuloitteista tietoa yksiuloitteisissa taulukoissa,joissa indeksi kertoo tiedon sijainnin sen ainoassa ulottuvuudessa. Esimerkiksi voimme luoda kolmialkioisen yksiuloitteisen taulukon:
+```java
+int taulukko[] = new int[1,2,3]
+```
+Ja saamme arvon 2 tästä taulukosta sen indeksin perusteella
+```java
+taulukko[1]
+```
+
+Voimme tarvittaessa käsitellä myös moniuloitteista tietoa moniuloitteisissa taulukoissa. Näissä tapauksissa tarvitsemme arvon indeksin jokaisessa ulottuvuudessa sen löytämiseksi.
+Esimerkiksi kaksiuloitteisesta taulukosta saattaisimme hakea arvoa 2 indekseillä
+```
+taulukko[1][2]
+```
+joka tarkoittaa sitä, että arvon 2 indeksi ulottuvuudessa 1 on 1, ja sen indeksi ulottuvuudessa 2 on 2.
+Kolmiuloitteisella taulukolla indeksit voisivat olla esimerkiksi
+```
+taulukko[1][2][4]
+```
+Moniuloitteiset taulukot Javassa ovat taulukoita, joiden alkiot sisältävät taulukoita.
+Rakenteen voi ajatella niin, että ensimmäisen ulottuvuuden taulukon jokainen indeksi sisältää taulukollisen  toisen ulottuvuuden arvoja kyseisessä ensimmäisen ulottuvuuden indeksissä.
+
+Java-koodina kaksiuloitteisen taulukon luominen näyttää siis tältä:
+```java
+int koko_1 = 2
+int koko_2 = 3
+int kaksiUloitteinenTaulukko[][] = new int[koko_1][koko_2]
+```
+</only-for-ab-group>
+
+<!-- A2 viewing -->
+
+<only-for-ab-group group=5>
+
+![Moniuloitteisten taulukkojen toiminta ja rakenne](./multiDimArrayA2.jpg)
+
+</only-for-ab-group>
+
+<!-- A2 responding -->
+<only-for-ab-group group=6>
+
+<pdf-slideshow>
+
+[a](../slideshows/moniuloitteinen_interactive_A2.pdf)
+
+</pdf-slideshow>
+
+</only-for-ab-group>
+
+</ab-study>
+
+Kaksiulotteisen taulukon läpikäynti onnistuu kahden sisäkkäisen for-toistolauseen avulla seuraavasti:
 
 ```java
 int rivit = 2;
