@@ -13,6 +13,10 @@ hidden: false
 
 Tutustu allaolevaan materiaaliin, ja vastaa kyselyihin.
 
+<quiz id='b2b65686-8e50-457c-ab2c-ec3d8b01b230'></quiz>
+
+<quiz id='a4457721-82d0-46a0-9993-d926a21386b0'></quiz>
+
 <ab-study id="visualization_instructional_effiency_2_f19">
 
 <!-- A1 no viewing -->
@@ -107,6 +111,7 @@ int kaksiUloitteinenTaulukko[][] = new int[koko_1][koko_2]
 </only-for-ab-group>
 
 <!-- A2 responding -->
+
 <only-for-ab-group group=6>
 
 <pdf-slideshow>
@@ -118,6 +123,8 @@ int kaksiUloitteinenTaulukko[][] = new int[koko_1][koko_2]
 </only-for-ab-group>
 
 </ab-study>
+
+<quiz id='b99f4d6c-93d1-4057-b8a3-f55ff1914150'></quiz>
 
 Kaksiulotteisen taulukon läpikäynti onnistuu kahden sisäkkäisen for-toistolauseen avulla seuraavasti:
 

@@ -495,6 +495,10 @@ Toteuta tehtäväpohjaan edellistä esimerkkiä noudattaen luokka `Lista`. Teht�
 
 Tutustu allaolevaan materiaaliin, ja vastaa kyselyihin.
 
+<quiz id='b2b65686-8e50-457c-ab2c-ec3d8b01b230'></quiz>
+
+<quiz id='aa84286e-87c9-4800-b2c4-e167f367d9f2'></quiz>
+
 <ab-study id="visualization_instructional_effiency_f19">
 
 <!-- A1 no viewing -->
@@ -577,7 +581,7 @@ Avaimen perusteella haettaessa lasketaan ensin avaimen hajautusarvo f(avain). Si
 
 </ab-study>
 
-
+<quiz id='ac0637d0-88fc-4ee6-8970-e36648fd6b34'></quiz>
 
 ### Avain-arvo -pari
 
