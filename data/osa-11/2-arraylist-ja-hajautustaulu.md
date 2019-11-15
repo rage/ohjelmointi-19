@@ -493,12 +493,103 @@ Toteuta tehtäväpohjaan edellistä esimerkkiä noudattaen luokka `Lista`. Teht�
 
 ## Hajautustaulu
 
-Hajautustaulu on toteutettu taulukkona, missä jokainen alkio sisältää listan. Listalle tallennetaan (avain,arvo)-pareja. Käyttäjä voi hakea hajautustaulusta arvoja avaimen perusteella, ja toisaalta käyttäjä voi lisätä hajautustauluun avain-arvo -pareja. Kukin avain voi esiintyä hajautustaulussa korkeintaan kerran.
+Tässä kappaleessa esitellään hajautustaulujen toimintaa. Vastaa ensin allaoleviin kahteen kyselyyn , ja tutustu sitten materiaaliin. Materiaalin opiskelun jälkeen sinun tulee myös vastata vielä yhteen kyselyyn.
 
-Hajautustaulun toiminta perustuu avaimen hajautusarvoon. Kun hajautustauluun lisätään (avain,arvo)-pari, lasketaan avaimeen liittyvä hajautusarvo. Hajautusarvo määrää hajautustaulun sisäisen taulukon indeksin, missä olevaan listaan (avain,arvo)-pari lisätään.
+<quiz id='b2b65686-8e50-457c-ab2c-ec3d8b01b230'></quiz>
 
-Hahmotellaan hajautustaulun toimintaa.
+<quiz id='aa84286e-87c9-4800-b2c4-e167f367d9f2'></quiz>
 
+<ab-study id="visualization_instructional_effiency_f19">
+
+<!-- A1 no viewing -->
+<only-for-ab-group group=1>
+
+Hajautustaulut ovat tietorakenteita, joissa säilytetään (avain, arvo) -pareja. Ne on suunniteltu niin, että tiedon löytäminen niistä on mahdollisimman nopeaa ja tehokasta. Tieto hajautustaulussa jaotellaan lyhyiksi listoiksi avaimen hajautusarvon perusteella. Hajautusarvo lasketaan hajautusfunktion perusteella.
+
+### Hajautustaulun rakenne
+
+Hajautustaulu toteutetaan taulukkona, jonka jokainen alkio sisältää listan. Listat sisältävät (avain, arvo) -pareja.
+
+### Tiedon  lisääminen hajautustauluun
+
+Kun uusi (avain, arvo) -pari halutaan tallettaa hajautustauluun, on ensin laskettava avaimen hajautusarvo. Hajautusarvo lasketaan hajautusfunktion avulla. (Avain, arvo) -pari lisätään hajautusarvon mukaisessa taulukon indeksissä sijaitsevaan listaan.
+
+Jos esimerkiksi haluamme lisätä hajautustauluun (avain, arvo) -parin <11, “eleven”>, laskemme ensin hajautufunktion f avulla avaimen hajautusarvon f(11). Tässä esimerkissä f(11) = x, joten avain, arvo pari <11, “eleven”> talletetaan listaan, joka sijaitsee taulukon indeksissä x.
+
+### Tiedon hakeminen hajautustaulusta
+
+Hakeaksemme avaimen arvon hajautustaulusta, laskemme ensin avaimen hajautusarvon hajautusfunktion avulla. Kun tiedämme avaimen hajautusarvon, tiedämme missä taulukon indeksissä sijaitsevasta listasta meidän tulee etsiä avaimen arvoa. Voimme sitten selata hajautusarvon mukaisessa indeksissä sijaitsevan listan läpi löytääksemme oikean arvon. Listat hajautustaulussa pidetään tarkoituksella lyhyinä, jotta niiden läpi selaaminen olisi mahdollisimman nopeaa.
+
+Esimerkiksi, jos haluamme löytää avaimen 11 arvon hajautustaulusta, laskemme ensin avaimen hajautusarvon hajautusfunktion f avulla. Tässä esimerkissä f(11) = x, joten tiedämme, että arvo löytyy taulukon indeksissä x sijaitsevasta listasta. Selaamme sitten läpi taulukon indeksissä x sijaitsevan listan, josta löytyy avaimen 11 arvo, “eleven”.
+
+</only-for-ab-group>
+
+<!-- A1  viewing -->
+<only-for-ab-group group=2>
+
+Alla oleva visualisaatio käsittelee hajautustaulujen toimintaa. Katsele visualisaatio läpi, ja vastaa sitten allaolevaan kyselyyn.
+
+![Hajautustaulujen rakenne ja toiminta](./HajautustaulutA1.jpg)
+
+</only-for-ab-group>
+
+<!-- A1  responding -->
+<only-for-ab-group group=3>
+
+Allaoleva esitys opettaa hajautustaulujen toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
+
+<pdf-slideshow>
+
+[a](../slideshows/hajautustaulut_interactive_A1.pdf)
+
+</pdf-slideshow>
+
+</only-for-ab-group>
+
+<!-- A2  no viewing -->
+<only-for-ab-group group=4>
+
+Hajautustaulut ovat tietorakenteita, joihin talletetaan dataa (avain, arvo) -pareina. Ne on suunniteltu niin, että datan hakeminen on mahdollisimman nopeaa ja tehokasta.
+(Avain, arvo) -parin sijainti hajautustaulussa määräytyy avaimen hajautusarvon perusteella. Hajautusarvo lasketaan hajautusfunktion avulla.
+Hajautustaulun toimintaperiaate perustuu siihen, että (avain, arvo) -parit talletetaan  pieniksi joukoiksi, joilla kaikilla on sama hajautusarvo. Tällöin avaimen perusteella haettaessa käydään läpi vain hyvin pieni joukko (avain,arvo) -pareja -- olettaen toki, että hajautusarvo on järkevä.
+
+Tässä osassa toteutamme hajautustaulun taulukkona, jonka jokainen alkio sisältää Java ArrayListin  tyyppiä on (avain, arvo) -pari. Data talletetaan taulukkoon sen avaimen hajautusarvon mukaisessa  indeksissä sijaitsevaan listaan. Jokainen Java -olio sisältää oliometodin hashCode(), jota käytämme hajautusarvon laskemiseen.
+Käyttäjä voi hakea hajautustaulusta arvoja avaimen perusteella, ja toisaalta käyttäjä voi lisätä hajautustauluun (avain,arvo) -pareja. Kukin avain voi esiintyä hajautustaulussa korkeintaan kerran.
+
+Lisättäessä uusi (avain, arvo) -pari hajautustauluun, lasketaan ensin hajautusfunktion f avulla avaimen hajautusarvo f(avain). Katsomme sitten, sisältääkö taulukon indeksi f(avain) jo listan. Jos ei sisällä, luomme uuden listan taulukon indeksiin f(avain), ja lisäämme uuden (avain, arvo) -parin listaan. Jos taulukon indeksissä f(avain) on jo lista, käymme listan läpi avain avaimelta, ja katsomme sisältääkö se jo avaimen, jota olemme lisäämässä. Jos avain on jo listassa, päivitämme avaimen arvon uuteen arvoon. Jos avainta ei ole vielä listassa, lisäämme uuden (avain, arvo) -parin listaan.
+
+Avaimen perusteella haettaessa lasketaan ensin avaimen hajautusarvo f(avain). Sitten haetaan lista taulukon indeksistä f(avain), ja käydään lista läpi avain avaimelta, verraten jokaista avainta etsimäämme avaimeen. Jos etsimäämme avainta ei löydy listasta, palautetaan null. Jos avain löytyy, palautetaan avaimen arvo.
+
+
+
+
+</only-for-ab-group>
+
+<!-- A2   viewing -->
+<only-for-ab-group group=5>
+
+Alla oleva visualisaatio käsittelee hajautustaulujen toimintaa. Katsele visualisaatio läpi, ja vastaa sitten allaolevaan kyselyyn.
+
+![Hajautustaulujen rakenne ja toiminta](./HajautustaulutA2.jpg)
+
+</only-for-ab-group>
+
+<!-- A2   responding -->
+<only-for-ab-group group=6>
+
+Allaoleva esitys opettaa hajautustaulujen toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
+
+<pdf-slideshow>
+
+[a](../slideshows/hajautustaulut_interactive_A2.pdf)
+
+</pdf-slideshow>
+
+</only-for-ab-group>
+
+</ab-study>
+
+<quiz id='ac0637d0-88fc-4ee6-8970-e36648fd6b34'></quiz>
 
 ### Avain-arvo -pari
 
