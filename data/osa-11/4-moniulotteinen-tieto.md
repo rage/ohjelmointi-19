@@ -65,7 +65,7 @@ Alla oleva visualisaatio käsittelee moniuloitteista tietoa ja moniuloitteisten 
 
 <pdf-slideshow>
 
-Allaoleva powerpoint käsittelee moniuloitteista tietoa ja moniuloitteisten taulukoiden toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
+Allaoleva esitys opettaa moniuloitteista tietoa ja moniuloitteisten taulukoiden toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
 
 [a](../slideshows/moniuloitteinen_interactiveA1.pdf)
 
@@ -121,7 +121,7 @@ Alla oleva visualisaatio käsittelee moniuloitteista tietoa ja moniuloitteisten 
 
 <only-for-ab-group group=6>
 
-Allaoleva powerpoint käsittelee moniuloitteista tietoa ja moniuloitteisten taulukoiden toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
+Allaoleva esitys opettaa moniuloitteista tietoa ja moniuloitteisten taulukoiden toimintaa. Katsele ensin esitys läpi, ja vastaa sitten kyselyyn.
 
 <pdf-slideshow>
 
