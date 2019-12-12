@@ -29,6 +29,8 @@ Loppusyksyn 2019 pajaohjausajat (luokka BK107):
 * Torstaisin 14-18
 * Perjantaisin 12-14
 
+Vuoden viimeinen pajaohjaus on 18.12.
+
 Huomaathan, että ajat saattavat muuttua syksyn aikana. Ylläolevaa listaa päivitetään, jos ajat sattuvat muuttumaan. Kannattaa tarkistaa tätä listaa säännöllisesti.
 
 Exactum-rakennuksen aulassa olevasta infonäytöstä löytää salin tarkemman sijainnin. Voit myös kysyä salin sijaintia aulan vahtimestareilta sekä kampuksen henkilökunnalta ja opiskelijoilta.
