@@ -32,6 +32,7 @@
     "here":"here",
     "solutionHowTo":"How to see the solution",
     "noCoin":"In this exercise you cannot use a coin to see the solution before submitting the exercise.",
+    "modelSolutionUnavailableBecauseEmailNotVerified": "Please verify your email address to enable model solutions.",
     "whyCoin":"You can see the solution either before or after submitting the exercise. If you want to see the solution before submitting the exercise you have to use solutioncoins.",
     "getNewCoin":"You will get a new solutioncoin when you have submitted",
     "getNewCoin2":"exercises. You can use coins to see exercise solutions and get yourself out of a pickle.",

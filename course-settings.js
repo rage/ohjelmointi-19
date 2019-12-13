@@ -38,6 +38,7 @@ const courseSettings = {
   ],
   sidebarFuturePages: [], // { title: "Osa 14", tba: "19.4.2019" },
   splitCourses: true,
+  useNewPointsVisualization: false
 }
 
 module.exports = {
