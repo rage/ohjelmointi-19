@@ -6,6 +6,8 @@ information_page: true
 banner: true
 ---
 
+<b>Kurssista on saatavilla uudempi versio täällä: [https://ohjelmointi-20.mooc.fi/](https://ohjelmointi-20.mooc.fi/)</b>.
+
 Ohjelmoinnin MOOC on kaikille avoin ja ilmainen ohjelmoinnin perusteet
 opettava verkkokurssi. Kurssilla perehdytään nykyaikaisen ohjelmoinnin
 perusideoihin sekä ohjelmoinnissa käytettävien työvälineiden lisäksi
