@@ -24,7 +24,7 @@ const Page = styled.li`
   text-decoration: none;
   border-radius: 10px;
 
-  ${props =>
+  ${(props) =>
     props.currentPage &&
     `
     background-color: black;
@@ -66,7 +66,7 @@ const StyledPaper = styled(Paper)`
 
 const PagesInThisSection = ({ style, t }) => (
   <PagesContext.Consumer>
-    {value => {
+    {(value) => {
       const currentPath = value.current.path
       let sectionPath = currentPath
       const sectionSeparator = nthIndex(currentPath, "/", 2)
@@ -75,7 +75,7 @@ const PagesInThisSection = ({ style, t }) => (
       }
 
       const sectionPages = value.all
-        .filter(o => o.path.startsWith(`${sectionPath}/`))
+        .filter((o) => o.path.startsWith(`${sectionPath}/`))
         .sort((a, b) => {
           a = a.path.toLowerCase()
           b = b.path.toLowerCase()

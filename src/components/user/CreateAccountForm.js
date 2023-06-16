@@ -4,7 +4,6 @@ import { TextField, Button } from "@material-ui/core"
 import { createAccount, authenticate } from "../../services/moocfi"
 import { capitalizeFirstLetter } from "../../util/strings"
 import { navigate } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { withTranslation } from "react-i18next"
 import styled from "styled-components"
 import withSimpleErrorBoundary from "../../util/withSimpleErrorBoundary"
@@ -25,7 +24,7 @@ const FormContainer = styled.div`
 `
 
 class CreateAccountForm extends React.Component {
-  onClick = async e => {
+  onClick = async (e) => {
     e.preventDefault()
     this.setState({ submitting: true, triedSubmitting: true })
     if (!this.validate()) {
@@ -46,10 +45,10 @@ class CreateAccountForm extends React.Component {
     } catch (error) {
       try {
         let message = ""
-        Object.entries(error).forEach(o => {
+        Object.entries(error).forEach((o) => {
           const key = o[0]
           const value = o[1]
-          value.forEach(msg => {
+          value.forEach((msg) => {
             let newMessage = capitalizeFirstLetter(
               `${key.replace(/_/g, " ")} ${msg}.`,
             )
@@ -73,7 +72,7 @@ class CreateAccountForm extends React.Component {
     }
   }
 
-  handleInput = e => {
+  handleInput = (e) => {
     const name = e.target.name
     const value = e.target.value
     this.setState({ [name]: value }, () => {
@@ -109,9 +108,8 @@ class CreateAccountForm extends React.Component {
       if (password !== password_confirmation) {
         newState.error += this.props.t("passwordsNoMatch")
         newState.errorObj.password = this.props.t("passwordsNoMatch")
-        newState.errorObj.password_confirmation = this.props.t(
-          "passwordsNoMatch",
-        )
+        newState.errorObj.password_confirmation =
+          this.props.t("passwordsNoMatch")
       }
     }
 
@@ -154,13 +152,9 @@ class CreateAccountForm extends React.Component {
         <Form onChange={this.validate}>
           <InfoBox>
             {this.props.t("courseUses")}{" "}
-            <OutboundLink
-              href="https://mooc.fi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://mooc.fi" target="_blank" rel="noopener noreferrer">
               mooc.fi
-            </OutboundLink>{" "}
+            </a>{" "}
             {this.props.t("courseUses2")}
           </InfoBox>
 

@@ -2,7 +2,6 @@ import React from "react"
 import Helmet from "react-helmet"
 import Layout from "../templates/Layout"
 import Container from "../components/Container"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { withLoginStateContext } from "../contexes/LoginStateContext"
 
 const Credits = () => (
@@ -12,13 +11,13 @@ const Credits = () => (
       <h1>Kiitokset ja materiaalista</h1>
       <p>
         Kurssin on tehnyt Helsingin yliopiston{" "}
-        <OutboundLink
+        <a
           href="https://www.helsinki.fi/en/researchgroups/data-driven-education"
           target="_blank"
           rel="noopener noreferrer"
         >
           Agile Education Research -tutkimusryhmä
-        </OutboundLink>
+        </a>
         .
       </p>
       <h2>Kurssimateriaali</h2>
@@ -47,13 +46,13 @@ const Credits = () => (
 
       <p>
         Kurssin materiaali on lisensoitu{" "}
-        <OutboundLink
+        <a
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi"
           target="_blank"
           rel="noopener noreferrer"
         >
           Creative Commons BY-NC-SA 4.0
-        </OutboundLink>{" "}
+        </a>{" "}
         -lisenssillä, joten voit käyttää ja levittää sitä vapaasti, kunhan
         alkuperäisten tekijöiden nimiä ei poisteta. Jos teet muutoksia
         materiaaliin ja haluat levittää muunneltua versiota, se täytyy
@@ -65,38 +64,34 @@ const Credits = () => (
 
       <p>
         Kurssin sivun ovat tehneet{" "}
-        <OutboundLink
+        <a
           href="https://github.com/nygrenh"
           target="_blank"
           rel="noopener noreferrer"
         >
           Henrik Nygren
-        </OutboundLink>{" "}
+        </a>{" "}
         ja{" "}
-        <OutboundLink
+        <a
           href="https://github.com/redande"
           target="_blank"
           rel="noopener noreferrer"
         >
           Antti Leinonen
-        </OutboundLink>
+        </a>
         . Helsingin yliopiston{" "}
-        <OutboundLink
+        <a
           href="https://www.helsinki.fi/en/researchgroups/data-driven-education"
           target="_blank"
           rel="noopener noreferrer"
         >
           Agile Education Research -tutkimusryhmä
-        </OutboundLink>{" "}
+        </a>{" "}
         on luonut ja ylläpitää kurssilla käytettyä ohjelmointitehtävien
         palautusympäristöä{" "}
-        <OutboundLink
-          href="https://tmc.mooc.fi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://tmc.mooc.fi" target="_blank" rel="noopener noreferrer">
           Test My Code
-        </OutboundLink>
+        </a>
         :a, Test My Coden liitännäisiä ohjelmointiympäristöhin,
         kurssimateriaalissa olevaa kyselyjärjestelmää ja muita
         kurssimateriaalissa olevia vempaimia (widgettejä).

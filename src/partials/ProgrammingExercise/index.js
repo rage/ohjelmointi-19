@@ -3,7 +3,6 @@ import styled from "styled-components"
 import ContentLoader from "react-content-loader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt as icon, faRedo } from "@fortawesome/free-solid-svg-icons"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { get } from "lodash"
 import { Card, CardContent, Button } from "@material-ui/core"
 
@@ -26,7 +25,7 @@ const ProgrammingExerciseWrapper = styled(Card)`
   margin: 3.5rem 0;
   // border-left: 0.2rem solid ${accentColor};
   border-radius: 1rem !important;
-  box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3) !important;
+  box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.3) !important;
   padding: 0 !important;
 `
 
@@ -277,13 +276,13 @@ class ProgrammingExercise extends React.Component {
                     <Small>
                       <p>
                         {this.props.t("submitNB")}{" "}
-                        <OutboundLink
+                        <a
                           href="https://materiaalit.github.io/tmc-asennus/netbeans/"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
                           {this.props.t("submitHowTo")}
-                        </OutboundLink>
+                        </a>
                         .
                       </p>
                       <StyledDivider />

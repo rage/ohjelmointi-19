@@ -4,7 +4,6 @@ import Layout from "../templates/Layout"
 import { authenticate, loggedIn } from "../services/moocfi"
 import { navigate, Link } from "gatsby"
 import { TextField, Button } from "@material-ui/core"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { withTranslation } from "react-i18next"
 import styled from "styled-components"
 import LoginStateContext, {
@@ -51,7 +50,7 @@ class SignInPage extends React.Component {
     clearInterval(this.fallbackRedirector)
   }
 
-  onClick = async e => {
+  onClick = async (e) => {
     e.preventDefault()
     if (
       this.state.submitting ||
@@ -108,13 +107,13 @@ class SignInPage extends React.Component {
             <Form>
               <InfoBox>
                 {this.props.t("user:courseUses")}{" "}
-                <OutboundLink
+                <a
                   href="https://mooc.fi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   mooc.fi
-                </OutboundLink>{" "}
+                </a>{" "}
                 {this.props.t("user:courseUses2")}
               </InfoBox>
 
@@ -126,7 +125,7 @@ class SignInPage extends React.Component {
                   label={this.props.t("user:emailUsername")}
                   fullWidth
                   value={this.state.email}
-                  onChange={o => this.setState({ email: o.target.value })}
+                  onChange={(o) => this.setState({ email: o.target.value })}
                 />
               </Row>
               <Row>
@@ -137,7 +136,7 @@ class SignInPage extends React.Component {
                   label={this.props.t("user:password")}
                   fullWidth
                   value={this.state.password}
-                  onChange={o => this.setState({ password: o.target.value })}
+                  onChange={(o) => this.setState({ password: o.target.value })}
                 />
               </Row>
 
@@ -163,13 +162,13 @@ class SignInPage extends React.Component {
               <Link to="/sign-up">{this.props.t("user:createAccount")}</Link>
             </Row>
             <Row>
-              <OutboundLink
+              <a
                 href="https://tmc.mooc.fi/password_reset_keys/new"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {this.props.t("user:forgottenPW")}
-              </OutboundLink>
+              </a>
             </Row>
           </FormContainer>
         </Container>
